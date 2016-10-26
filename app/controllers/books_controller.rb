@@ -28,11 +28,12 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    @categories = Category.all
   end
 
   def show
     @book = Book.find(params[:id])
-    @categoies = Category.all
+    @categories = Category.all
   end
 
   private
